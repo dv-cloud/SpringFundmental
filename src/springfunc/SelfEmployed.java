@@ -1,12 +1,17 @@
+package springfunc;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
+@Component
 public class SelfEmployed implements Worker {
+    @Autowired
     private Employee contractor;
     private String name;
 
-    public SelfEmployed(String name) {
-        this.name = name;
+    public SelfEmployed(Employee employee) {
+        this.contractor = employee;
     }
 
 

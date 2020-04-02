@@ -1,8 +1,13 @@
+package springfunc;
 
+import org.springframework.stereotype.Component;
+
+
+@Component
 public class Employee implements Worker {
     private String name;
-    public Employee(String name) {
-        this.name = name;
+
+    public Employee() {
     }
 
 
