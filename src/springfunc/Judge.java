@@ -1,7 +1,13 @@
 package springfunc;
 
-public class Judge implements Worker {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
+public class Judge implements Worker {
+    @Autowired
+    @Qualifier("lawyer")
     private Employee typeOfEmployee;
     private String name;
 
@@ -14,6 +20,10 @@ public class Judge implements Worker {
 
     public String getName() {
         return name;
+    }
+
+    public Employee getTypeOfEmployee() {
+        return typeOfEmployee;
     }
 
     @Override

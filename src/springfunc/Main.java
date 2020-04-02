@@ -12,8 +12,7 @@ public class Main {
         SelfEmployed selfEm = applicationContext.getBean(SelfEmployed.class);
 
         selfEm.setName("Driver");
-        selfEm.getContractor().setName("Mechanic");
-        System.out.println("SelfEmployed " + selfEm.getName() + " has as a contractor his own "
-                + selfEm.getContractor().getName() + ". The case is tried by the " + judge.getName());
+        System.out.println("SelfEmployed's employee is a " + selfEm.getContractor().getName() +
+                " and judge's employee is a " + judge.getTypeOfEmployee().getName());
     }
 }
